@@ -27,3 +27,19 @@ def create(request):
         'error': error
     }
     return render(request, 'main/create.html', context)
+
+def toorder(request):
+    error = ''
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            error = 'Ви щось не то тикнули'
+    form = TaskForm()
+    context = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'main/create.html', context)
