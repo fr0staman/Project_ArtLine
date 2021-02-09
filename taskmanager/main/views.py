@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Task
-from .forms import TaskForm
+from .forms import TaskForm, OrderForm
 
 
 def index(request):
@@ -28,18 +28,18 @@ def create(request):
     }
     return render(request, 'main/create.html', context)
 
-def toorder(request):
+def addingorder(request):
     error = ''
     if request.method == 'POST':
-        form = TaskForm(request.POST)
+        form = OrderForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('home')
         else:
             error = 'Ви щось не то тикнули'
-    form = TaskForm()
+    form = OrderForm()
     context = {
         'form': form,
         'error': error
     }
-    return render(request, 'main/create.html', context)
+    return render(request, 'main/addingorder.html', context)

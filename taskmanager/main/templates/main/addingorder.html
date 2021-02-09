@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Введіть свої дані:
+{% endblock %}
+
+{% block content %}
+<h1>Додати значення в базу даних:</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.title }} <br>
+    {{ form.task }} <br>
+    {{ form.P }} <br>
+    {{ form.I }} <br>
+    {{ form.B }} <br>
+    {{ form.email }} <br>
+    {{ form.phone }} <br>
+    {{ form.zona }} <br>
+    {{ form.DodPoslugu }} <br>
+    {{ form.Descrip }} <br>
+    <button type="submit" class="btn btn-success">Поставте 5!</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}
