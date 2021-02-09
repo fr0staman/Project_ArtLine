@@ -1,11 +1,11 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Введіть свої дані:
+Введіть свої дані
 {% endblock %}
 
 {% block content %}
-<h1>Додати значення в базу даних:</h1>
+<h1>Введіть свої дані:</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.title }} <br>
