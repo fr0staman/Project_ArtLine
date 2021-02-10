@@ -5,25 +5,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="taskmanager/main/templates/main/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
                                             <!-- ~Верстка~ //-->
      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-     <h5 class="my-0 mr-md-auto font-weight-normal">Logo</h5>
+     <h5 class="my-0 mr-md-auto font-weight-normal"><img src="logo.png"></h5>
     <!-- <h1 class="d-flex align-items-center fs-4 text-white mb-0">
       <img src="taskmanager/main/templates/main/logo.png" width="38" height="30" class="me-3" alt="Bootstrap">
       Cheatsheet
     </h1> //-->
             <nav class="my-2 my-md-0 me-md-3">
-                <a class="p-2 text-dark" href="{% url 'home' %}">Головна</a>
-                <a class="p-2 text-dark" href="{% url 'about' %}">Фотозона</a>
-                <a class="p-2 text-dark" href="{% url 'about' %}">Прайс</a>
-                <a class="p-2 text-dark" href="{% url 'about' %}">Фотографи</a>
-            </nav>
-                <a class="btn btn-outline-primary" href="{% url 'create' %}"
+                <a class="p-3 text-dark" href="{% url 'home' %}"
+                   style="font-weight:bold">Головна</a>
+                <a class="p-3 text-dark" href="{% url 'about' %}"
+                   style="font-weight:bold">Фотозона</a> <!--Замінити на photozones.html //-->
+                <a class="p-3 text-dark" href="{% url 'about' %}"
+                   style="font-weight:bold">Прайс</a> <!-- Замінити на price.html//-->
+                <a class="p-3 text-dark" href="{% url 'about' %}"
+                   style="font-weight:bold">Фотографи</a>
+                </nav>
+                <a class="btn btn-outline-primary"  href="{% url 'create' %}"
                    style="
                             display: inline-block;
                             font-weight: 400;
@@ -41,6 +45,9 @@
                             line-height: 1.5;
                             border-radius: .99rem;
                             border-color: #a8bcfb;
+                            margin-right: 25px;
+                            margin-left: 15px;
+                            font-weight:bold;
                             transition: color .15s ease-in-out,background-color
                             .15s ease-in-out,border-color .15s ease-in-out,box-shadow
                             .15s ease-in-out;">Бронювання</a>
