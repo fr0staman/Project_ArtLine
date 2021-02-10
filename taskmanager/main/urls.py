@@ -6,4 +6,5 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('create', views.create, name="create"),
     path('addingorder', views.addingorder, name="addingorder"),
+    path('photozones', views.photozones, name="photozones"),
 ]

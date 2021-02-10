@@ -43,3 +43,6 @@ def addingorder(request):
         'error': error
     }
     return render(request, 'main/addingorder.html', context)
+
+def photozones(request):
+    return render(request, 'main/photozones.html')
