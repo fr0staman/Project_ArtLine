@@ -28,6 +28,7 @@ def create(request):
     }
     return render(request, 'main/create.html', context)
 
+
 def addingorder(request):
     error = ''
     if request.method == 'POST':
@@ -44,5 +45,9 @@ def addingorder(request):
     }
     return render(request, 'main/addingorder.html', context)
 
+
 def photozones(request):
     return render(request, 'main/photozones.html')
+
+def price(request):
+    return render(request, 'main/price.html')

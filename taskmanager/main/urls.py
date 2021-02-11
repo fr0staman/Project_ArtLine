@@ -7,4 +7,5 @@ urlpatterns = [
     path('create', views.create, name="create"),
     path('addingorder', views.addingorder, name="addingorder"),
     path('photozones', views.photozones, name="photozones"),
+    path('price', views.price, name ="price"),
 ]
