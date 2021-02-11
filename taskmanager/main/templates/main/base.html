@@ -8,22 +8,106 @@
     <link rel="shortcut icon" href="/media/logo/logo.png" type="image/x-icon">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+                            <!-- ~Випадаюче меню~ //-->
+            *, *:before, *:after{
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+
+            }
+                                /*| Navigation |*/
+
+            nav{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+                border: 1px solid rgba(0,0,0,.1);
+            }
+            nav ul{
+                list-style: none;
+                position: relative;
+                float: right;
+                margin-right: 70px;
+                display: inline-table;
+            }
+            nav ul li{
+                float: left;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+            }
+
+            nav ul li:hover{background: rgba(0,0,0,.15);}
+            nav ul li:hover > ul{display: block;}
+
+            nav ul li a{
+                display: block;
+                padding: 30px 30px;
+                color: #222;
+                font-size: .9em;
+                letter-spacing: 1px;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+            nav ul ul{
+                display: none;
+                background: #fff;
+                position: absolute;
+                top: 100%;
+                box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+                border: 1px solid rgba(0,0,0,.1);
+            }
+            nav ul ul li{float: none; position: relative;}
+            nav ul ul li a {
+                padding: 10px 15px;
+                border-bottom: 1px solid rgba(0,0,0,.05);
+            }
+            nav ul ul ul {
+                position: absolute;
+                left: 80%;
+                top:0;
+            }
+            dl, ol, ul {
+                margin-top: 0;
+                margin-bottom: 0rem;
+            }
+                                <!--____________________________//-->
+    </style>
 </head>
 <body>
                                             <!-- ~Верстка~ //-->
-     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-     <h5 class="my-0 mr-md-auto font-weight-normal"><img src="/media/logo/logo.png"></h5>
-            <nav class="my-2 my-md-0 me-md-3">
-                <a class="p-3 text-dark" href="{% url 'home' %}"
-                   style="font-weight:bold">Головна</a>
-                <a class="p-3 text-dark" href="{% url 'photozones' %}"
-                   style="font-weight:bold">Фотозона</a>
-                <a class="p-3 text-dark" href="{% url 'price' %}"
-                   style="font-weight:bold">Прайс</a>
-                <a class="p-3 text-dark" href="{% url 'about' %}"
-                   style="font-weight:bold">Фотографи</a>
-                </nav>
-                <a class="btn btn-outline-primary"  href="{% url 'create' %}"
+
+     <!--<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+         <h5 class="my-0 mr-md-auto font-weight-normal"><img src="/media/logo/logo.png"></h5> //-->
+                <nav role='navigation'>
+                    <ul>
+                        <li><a class="p-3 text-dark" href="{% url 'home' %}"
+                        style="font-weight:bold">Головна</a></li>
+                        <li><a class="p-3 text-dark" href="{% url 'photozones' %}"
+                            style="font-weight:bold">Фотозона</a>
+                            <!-- видалити photozones.html, воно нам більше не потрібно//-->
+                    <ul>
+                        <li><a href="">Home Room</a></li> <!-- добавить homeroom.html//-->
+                        <li><a href="">Loft Room</a></li> <!-- добавить loftroom.html//-->
+                        <li><a href="">Smile Room</a></li> <!-- добавить smileroom.html//-->
+                        <li><a href="">Elle Room</a></li>  <!-- добавить elleroom.html//-->
+                        <li><a href="">In Room</a></li> <!-- добавить inroom.html//-->
+                        <li><a href="">Free Room</a></li> <!-- добавить freeroom.html//-->
+                    </ul>
+                    </li>
+                    <li><a class="p-3 text-dark" href="#"
+                    style="font-weight:bold">Прайс</a></li>
+                    <li><a class="p-3 text-dark" href="#"
+                    style="font-weight:bold">Фотографи</a></li>
+
+
+                <li><a class="btn btn-outline-primary"  href="{% url 'create' %}"
                    style="
                             display: inline-block;
                             font-weight: 400;
@@ -46,9 +130,11 @@
                             font-weight:bold;
                             transition: color .15s ease-in-out,background-color
                             .15s ease-in-out,border-color .15s ease-in-out,box-shadow
-                            .15s ease-in-out;">Бронювання</a>
+                            .15s ease-in-out;">Бронювання</a></li>
+                 </ul>
+                </nav>
                 <!-- <a class="btn btn-outline-primary" href="admin">Адміністрування</a> //-->
-     </div>
+     <!--</div> //-->
 <div class="container">
     {% block content %}{% endblock %}
 </div>
