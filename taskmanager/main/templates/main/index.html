@@ -5,6 +5,101 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Хто ми?</h1>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: #7EA0EA;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #A8BCFB;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 10px 12px;
+  border-top: none;
+}
+</style>
+
+<body>
+
+<h2>Десь тут буде логотип</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openZone(event, 'Home Room')">Home Room</button>
+  <button class="tablinks" onclick="openZone(event, 'Loft Room')">Loft Room</button>
+  <button class="tablinks" onclick="openZone(event, 'Smile Room')">Smile Room</button>
+  <button class="tablinks" onclick="openZone(event, 'Elle Room')">Elle Room</button>
+  <button class="tablinks" onclick="openZone(event, 'In Room')">In Room</button>
+  <button class="tablinks" onclick="openZone(event, 'Free Room')">Free Room</button>
+</div>
+
+<div id="Home Room" class="tabcontent">
+  <h3>Home Room</h3>
+  <p>description</p>
+</div>
+
+<div id="Loft Room" class="tabcontent">
+  <h3>Loft Room</h3>
+  <p>description</p>
+</div>
+
+<div id="Smile Room" class="tabcontent">
+  <h3>Smile Room</h3>
+  <p>description</p>
+</div>
+
+<div id="Elle Room" class="tabcontent">
+  <h3>Elle Room</h3>
+  <p>description</p>
+</div>
+
+<div id="In Room" class="tabcontent">
+  <h3>In Room</h3>
+  <p>description</p>
+</div>
+
+<div id="Free Room" class="tabcontent">
+  <h3>Free Room</h3>
+  <p>description</p>
+</div>
+
+<script>
+function openZone(evt, zoneName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(zoneName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
 {% endblock %}
