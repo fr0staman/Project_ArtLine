@@ -5,23 +5,32 @@
 {% endblock %}
 
 {% block content %}
+<figure class="fig"><img src="mainlogo.jpg" width="320" height="179"  alt="Logo"></figure>
+
             <style>
                 body {font-family: Arial;
+                text-align: center;
                 }
-
                 .tab {
-                    overflow: hidden;
                     background-color: #7EA0EA;
+                    display: flex;
+                    margin-block-start: 0.20em;
+                    margin-block-end: 0.90em;
+                    flex-shrink: 1;
+                    width: 139%;
+                    margin-left: -220px;
                 }
-
                 .tab button {
                     background-color: inherit;
                     float: center;
                     border: none;
                     outline: none;
                     cursor: pointer;
-                    padding: 14px 16px;
+                    padding: 14px 30px;
                     font-size: 20px;
+                    color: #E4E4E4;
+                    font-weight:bold;
+
                 }
 
                 .tab button:hover {
@@ -36,15 +45,25 @@
                 display: none;
                 padding: 10px 12px;
                 border-top: none;
+                text-align: left;
+                -webkit-animation: fadeEffect 1s;
+                animation: fadeEffect 1s;
+                }
+
+                @-webkit-keyframes fadeEffect {
+                    from {opacity: 0;}
+                    to {opacity: 1;}
+                    }
+
+                @keyframes fadeEffect {
+                from {opacity: 0;}
+                to {opacity: 1;}
                 }
             </style>
-
-<body>
-
 <h2>Десь тут буде логотип</h2>
 
 <div class="tab">
-  <button class="tablinks" onclick="openZone(event, 'Home Room')">Home Room</button>
+  <button class="tablinks" onclick="openZone(event, 'Home Room')" id="defaultOpen">Home Room</button>
   <button class="tablinks" onclick="openZone(event, 'Loft Room')">Loft Room</button>
   <button class="tablinks" onclick="openZone(event, 'Smile Room')">Smile Room</button>
   <button class="tablinks" onclick="openZone(event, 'Elle Room')">Elle Room</button>
@@ -54,7 +73,29 @@
 
 <div id="Home Room" class="tabcontent">
   <h3>Home Room</h3>
-  <p>description</p>
+  <p>description  description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description description description description description description description description
+  description</p>
+
 </div>
 
 <div id="Loft Room" class="tabcontent">
@@ -95,7 +136,7 @@ function openZone(evt, zoneName) {
   }
   document.getElementById(zoneName).style.display = "block";
   evt.currentTarget.className += " active";
-}
+   }
+   document.getElementById("defaultOpen").click();
 </script>
-
 {% endblock %}
