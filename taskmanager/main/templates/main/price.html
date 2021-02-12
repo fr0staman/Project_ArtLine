@@ -5,6 +5,99 @@
 {% endblock %}
 
 {% block content %}
-<h1>Тут буде прайс</h1>
-    <p>Тест тексту</p>
+                                <!--Логотип по середині//-->
+                            <!--І знову замість фотки квадрат :( //-->
+<figure class="fig"><img src="mainlogo.jpg" width="320" height="179" alt="Logo"></figure>
+                                    <!--Лінія//-->
+<hr align="center" width="1000" color=#000 style="margin-bottom: 2rem;"/>
+                                    <!--Заголовок//-->
+<div class="d14"><h3>Вартість послуг у фотостудії Art-Line</h3></div>
+
+        <style>
+            .fig {
+                display: block; /* Блочный элемент (для старых браузеров) */
+                text-align: center; /* Выравнивание по центру */
+                font-style: italic; /* Курсивное начертание */
+                margin-top: 0; /* Отступ сверху */
+                margin-bottom: 5px; /* Отступ снизу */
+                color: #666; /* Цвет подрисуночной подписи */
+            }
+            .d14 {
+                text-align:  center;
+            }
+
+            table {
+                font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+                text-align: left;
+                border-collapse: separate;
+                border-spacing: 3px;
+                background: #E7ECFF;
+                color: #323232;
+                border: 19px solid #E7ECFF;
+                border-radius: 25px;
+                margin: auto;
+                box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+                margin-bottom: 30px;
+                margin-top: 20px;
+            }
+            th {
+                font-size: 25px;
+                padding: 15px;
+            }
+            td {
+                background: #a8bcfb;
+                padding: 10px;
+            }
+        </style>
+
+            <table>
+                <tr>
+                    <th>Надання в користування залів</th>
+                    <th>Тривалість 1 год.</th>
+                </tr>
+                <tr>
+                    <td>Зал HOME ROOM</td>
+                    <td>600,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Зал SMILE ROOM</td>
+                    <td>600,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Зал LOFT ROOM</td>
+                    <td>600,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Зал IN ROOM</td>
+                    <td>450,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Зал ELLE ROOM</td>
+                    <td>650,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Зал FREE ROOM</td>
+                    <td>500,00 грн.</td>
+                </tr>
+                <tr>
+                    <th>Додаткові послуги</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Послуги фотографа</td>
+                    <td>1500,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Візажист (макіяж для 1 особи)</td>
+                    <td>від 450,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Перукар (зачіска для 1 особи)</td>
+                    <td>від 450,00 грн.</td>
+                </tr>
+                <tr>
+                    <td>Стиліст (образ для 1 особи)</td>
+                    <td>від 500,00 грн.</td>
+                </tr>
+            </table>
 {% endblock %}
