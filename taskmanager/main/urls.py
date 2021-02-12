@@ -8,4 +8,10 @@ urlpatterns = [
     path('addingorder', views.addingorder, name="addingorder"),
     path('photozones', views.photozones, name="photozones"),
     path('price', views.price, name ="price"),
+    path('homeroom', views.homeroom, name ="homeroom"),
+    path('loftroom', views.loftroom, name ="loftroom"),
+    path('smileroom', views.smileroom, name ="smileroom"),
+    path('elleroom', views.elleroom, name ="elleroom"),
+    path('inroom', views.inroom, name ="inroom"),
+    path('freeroom', views.freeroom, name ="freeroom"),
 ]

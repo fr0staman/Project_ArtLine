@@ -91,23 +91,23 @@
                         style="font-weight:bold">Головна</a></li>
                         <li><a class="p-3 text-dark" href="{% url 'photozones' %}"
                             style="font-weight:bold">Фотозона</a>
-                            <!-- видалити photozones.html, воно нам більше не потрібно//-->
+                            <!-- протестую поки //-->
                     <ul>
-                        <li><a href="">Home Room</a></li> <!-- добавить homeroom.html//-->
-                        <li><a href="">Loft Room</a></li> <!-- добавить loftroom.html//-->
-                        <li><a href="">Smile Room</a></li> <!-- добавить smileroom.html//-->
-                        <li><a href="">Elle Room</a></li>  <!-- добавить elleroom.html//-->
-                        <li><a href="">In Room</a></li> <!-- добавить inroom.html//-->
-                        <li><a href="">Free Room</a></li> <!-- добавить freeroom.html//-->
+                        <li><a href="{% url 'homeroom' %}">Home Room</a></li>
+                        <li><a href="{% url 'loftroom' %}">Loft Room</a></li>
+                        <li><a href="{% url 'smileroom' %}">Smile Room</a></li>
+                        <li><a href="{% url 'elleroom' %}">Elle Room</a></li>
+                        <li><a href="{% url 'inroom' %}">In Room</a></li>
+                        <li><a href="{% url 'freeroom' %}">Free Room</a></li>
                     </ul>
                     </li>
-                    <li><a class="p-3 text-dark" href="#"
+                    <li><a class="p-3 text-dark" href="{% url 'price' %}"
                     style="font-weight:bold">Прайс</a></li>
                     <li><a class="p-3 text-dark" href="#"
                     style="font-weight:bold">Фотографи</a></li>
 
 
-                <li><a class="btn btn-outline-primary"  href="{% url 'create' %}"
+                <li><a class="btn btn-outline-primary"  href="{% url 'addingorder' %}"
                    style="
                             display: inline-block;
                             font-weight: 400;

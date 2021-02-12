@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm, OrderForm
 
-
 def index(request):
     tasks = Task.objects.order_by('-id')
     return render(request, 'main/index.html', {'title': 'Головна сторінка сайту', 'tasks':tasks})
@@ -51,3 +50,26 @@ def photozones(request):
 
 def price(request):
     return render(request, 'main/price.html')
+
+def homeroom(request):
+    return render(request, 'main/homeroom.html')
+
+def loftroom(request):
+    return render(request, 'main/loftroom.html')
+
+def smileroom(request):
+    return render(request, 'main/smileroom.html')
+
+def elleroom(request):
+    return render(request, 'main/elleroom.html')
+
+def inroom(request):
+    return render(request, 'main/inroom.html')
+
+def freeroom(request):
+    return render(request, 'main/freeroom.html')
+
+def formworkers():
+    cursor = mysql.connection.cursor()
+    cur = cursor.execute("SELECT ID_worker, surname FROM workers")
+    return render_template('formworkers.html', workers0=cursor.fetchall())
