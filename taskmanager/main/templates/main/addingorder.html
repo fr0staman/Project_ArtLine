@@ -5,28 +5,88 @@
 {% endblock %}
 
 {% block content %}
-<h1>Введіть свої дані:</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.title }} <br>
-    {{ form.task }} <br>
-    {{ form.P }} <br>
-    {{ form.I }} <br>
-    {{ form.B }} <br>
-    {{ form.email }} <br>
-    {{ form.phone }} <br>
-    <select name="zona" class="form-control" placeholder="Введіть зону фотосесії" maxlength="32" required="" id="id_zona">
-        <option selected="" value="s1">HOME ROOM</option>
-        <option value="s2">LOFT ROOM</option>
-        <option value="s3">SMILE ROOM</option>
-        <option value="s4">ELLE ROOM</option>
-        <option value="s5">IN ROOM</option>
-        <option value="s6">FREE ROOM</option>
-    </select> <br>
-    <!-- {{ form.zona }} <br> -->
-    {{ form.DodPoslugu }} <br>
-    {{ form.Descrip }} <br>
-    <button type="submit" class="btn btn-success">Поставте 5!</button>
-    <span>{{ error }}</span>
-</form>
+            <style>
+                * {
+                    box-sizing: border-box;
+                    }
+                body {
+                    background: #7EA0EA;
+                }
+                .decor {
+                    max-width: 700px;
+                    margin: 50px auto 0;
+                    background: white;
+                    border-radius: 40px;
+                    box-shadow: 0.5em 0.5em 5px rgba(119,119,119,0.5);
+                    margin-bottom: 30px;
+                    margin-top: 10px;
+                }
+                .form-inner {
+                    padding: 50px;
+                }
+                 .form-inner input,.form-inner textarea {
+                    display: block;
+                    width: 100%;
+                    padding: 0 20px;
+                    margin-bottom: 5px;
+                    background: #E9EFF6;
+                    line-height: 30px;
+                    border-width: 0;
+                    border-radius: 20px;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .form-inner textarea {
+                    resize: none;
+                }
+                .form-inner h3 {
+                    margin-top: 0;
+                    margin-bottom: -15px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    font-size: 28px;
+                    color: #707981;
+                }
+            </style>
+    <form class="decor">
+        <div class="form-inner">
+            <h3>Введіть свої дані:</h3>
+                {% csrf_token %}
+                {{ form.title }} <br>
+                {{ form.task }} <br>
+                {{ form.P }}<br>
+                {{ form.I }} <br>
+                {{ form.B }} <br>
+                {{ form.email }} <br>
+                {{ form.phone }} <br>
+            <select name="zona" class="form-control" placeholder="Введіть зону фотосесії" maxlength="32" required="" id="id_zona">
+                    <option selected="" value="s1">HOME ROOM</option>
+                    <option value="s2">LOFT ROOM</option>
+                    <option value="s3">SMILE ROOM</option>
+                    <option value="s4">ELLE ROOM</option>
+                    <option value="s5">IN ROOM</option>
+                    <option value="s6">FREE ROOM</option>
+            </select> <br>
+                <!-- {{ form.zona }} <br> -->
+                {{ form.DodPoslugu }} <br>
+                {{ form.Descrip }} <br>
+            <button type="submit" class="btn btn-success"
+            style="
+                    margin-top: 30px;
+                    background: #bbd0ff;
+                    border-bottom: 3px solid #7ea0ea;
+                    color: white;
+                    font-size: 19px;
+                    line-height: 30px;
+                    border-width: 7;
+                    border-radius: 20px;
+                    font-family: 'Roboto', sans-serif;
+                    display: block;
+                    width: 100%;
+                    padding: 0 20px;
+                    margin-bottom: 10px;
+                    border-color: #7ea0ea;
+                    ">Забронювати</button>
+            <span>{{ error }}</span>
+        </div>
+    </form>
 {% endblock %}
