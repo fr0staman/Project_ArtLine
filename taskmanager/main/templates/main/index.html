@@ -8,6 +8,28 @@
 <figure class="fig"><img src="mainlogo.jpg" width="320" height="179"  alt="Logo"></figure>
 
             <style>
+                p {
+                    text-align: justify;
+                }
+                .btn{
+                    float: right;
+                    color: #212529;
+                    text-align: center;
+                    vertical-align: middle;
+                    user-select: none;
+                    background-color: #a8bcfb;
+                    border: 1px solid #a8bcfb;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    border-radius: .99rem;
+                    border-color: #a8bcfb;
+                    font-weight:bold;
+                }
+                .btn:hover {
+                    background-color: #A8BCFB;
+                    border: 1px solid #A8BCFB;
+                }
+
                 .tab {
                     background-color: #7EA0EA;
                     display: flex;
@@ -71,7 +93,7 @@
 
 <div id="Home Room" class="tabcontent">
   <div style="float:left; padding-right: 30px;
-  margin-bottom: 10px;"><img src= "logo.png"width="530" height="370" align="left"></div>
+  margin-bottom: 23px;"><img src= "logo.png"width="510" height="356" align="left"></div>
   <h3>Home Room</h3>
   <p>Кімната наповнена домашнім затишком, та відчуттям заміського будинку.</p>
   <p>Розкішна веранда, яка створює затишок і особливо атмосферно дивитиметься у новорічних декорах
@@ -80,10 +102,12 @@
     Зал ізольований, має підігрів підлоги та багато денного світла.
     У цьому залі надзвичайно гармонійно дивляться сімейні, дитячі, зйомки вагітних, індивідуальні фотосесії,
     ранки наречених та весільні фото та відеозйомки.</p>
+    <a class="btn btn-outline-primary"  href="{% url 'homeroom' %}">Детальніше</a>
 </div>
 
 <div id="Loft Room" class="tabcontent">
-  <div style="float:left; padding-right: 30px;"><img src= "logo.png"width="540" height="380" align="left"></div>
+  <div style="float:left; padding-right: 30px;
+    margin-bottom: 23px;"><img src= "logo.png"width="510" height="356" align="left"></div>
   <h3>Loft Room</h3>
   <p>Кімната умовно ділиться на дві частини – світлий та темний Лофт.
      Світла частина – кухня-студія, яка нікого не залишить байдужим,
@@ -92,42 +116,51 @@
   <p>Також вона чудово підійде для стильних предметних зйомок. Друга частина –  темний Лофт.
      Ізюминкою тут є графітна стіна – поле для найкреативніших ваших ідей.
      Темні контрастні лінії та кольори надихнуть вас для цікавих ідей</p>
+    <a class="btn btn-outline-primary"  href="{% url 'loftroom' %}">Детальніше</a>
 </div>
 
 <div id="Smile Room" class="tabcontent">
-  <div style="float:left; padding-right: 30px;"><img src= "logo.png"width="540" height="380" align="left"></div>
+  <div style="float:left; padding-right: 30px;
+    margin-bottom: 23px;"><img src= "logo.png"width="510" height="356" align="left"></div>
   <h3>Smile Room</h3>
   <p>Сама назва говорить про те, що кімната завжди наповнена дитячими усмішками.
      Наймиліший простір для ваших малюків, із комфортними умовами,
      адже у цій кімнаті завжди тепло завдяки підігріву підлоги</p>
+    <a class="btn btn-outline-primary"  href="{% url 'smileroom' %}">Детальніше</a>
 </div>
 
 <div id="Elle Room" class="tabcontent">
-  <div style="float:left; padding-right: 30px;"><img src= "logo.png"width="540" height="380" align="left"></div>
+  <div style="float:left; padding-right: 30px;
+     margin-bottom: 23px;"><img src= "logo.png"width="510" height="356" align="left"></div>
   <h3>Elle Room</h3>
   <p>Ця кімната надихає на відверті та сміливі ідеї.
      Тут можна поєднати чоловічу силу та елегантність і відвертість жінки.
      Кольорові рішення цієї кімнати підкреслять ваш задум та нададуть характеру вашим фото.
      Ви точно не залишитесь байдужими від перебування у цьому залі. Зал оснащений професійним студійним світлом,
      софт боксами та кольоровими фільтрами</p>
+    <a class="btn btn-outline-primary"  href="{% url 'elleroom' %}">Детальніше</a>
 </div>
 
 <div id="In Room" class="tabcontent">
-  <div style="float:left; padding-right: 30px;"><img src= "logo.png"width="540" height="380" align="left"></div>
+  <div style="float:left; padding-right: 30px;
+    margin-bottom: 23px;"><img src= "logo.png"width="510" height="356" align="left"></div>
   <h3>In Room</h3>
   <p>Наймовірніше, що саме ця кімната стане вашою улюбленою, адже тут бато природнього світла,
      мінімалістичний декор, та ізюминка цього залу дерево.
      Білосніжні стіни та підлога завжди стануть у нагоді до будь – яких ваших творчих рішень.</p>
+    <a class="btn btn-outline-primary"  href="{% url 'inroom' %}">Детальніше</a>
 </div>
 
 <div id="Free Room" class="tabcontent">
-  <div style="float:left; padding-right: 30px;"><img src= "logo.png"width="540" height="380" align="left"></div>
+  <div style="float:left; padding-right: 30px;
+     margin-bottom: 23px;"><img src= "logo.png"width="510" height="356" align="left"></div>
   <h3>Free Room</h3>
   <p>Вільний простір, який формується з ваших ідей та натхнення.
      У ньому велика циклорама 6-8 м стане для вас полем різного роду фантазій та вигадок.
      Усе це доповнюється професійним студіним світлом, не тільки для фото,а й для відео зйомок.
      А ще цей зал чудово підійде для різного роду подій, корпоративів, вечірок, зустрічей, конференцій, зібрань.
      Відпочивайте та творіть разом з нами!</p>
+    <a class="btn btn-outline-primary"  href="{% url 'freeroom' %}">Детальніше</a>
 </div>
 
 <script>
