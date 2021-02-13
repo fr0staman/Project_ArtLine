@@ -61,7 +61,7 @@
                 width: 100%;
                 background: #fff;
                 box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
-                border: 1px solid rgba(0,0,0,.1);
+
             }
             nav ul{
                 list-style: none;
@@ -72,9 +72,9 @@
             }
             nav ul li{
                 float: left;
-                -webkit-transition: all .2s ease-in-out;
-                -moz-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
+                -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
             }
 
             nav ul li:hover{background: rgba(0,0,0,.15);}
@@ -84,10 +84,11 @@
                 display: block;
                 padding: 30px 30px;
                 color: #222;
-                font-size: .9em;
+                font-size: 12pt;
                 letter-spacing: 1px;
                 text-decoration: none;
                 text-transform: capitalize;
+
             }
             nav ul ul{
                 display: none;
@@ -108,7 +109,7 @@
                 top:0;
             }
             dl, ol, ul {
-                margin-top: 0;
+                margin-top: 10;
                 margin-bottom: 0rem;
             }
                                 <!--____________________________//-->
@@ -118,44 +119,37 @@
  <div class="wrapper">
     <div class="header">
                                             <!-- ~Верстка~ //-->
-
-     <!--<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-         <h5 class="my-0 mr-md-auto font-weight-normal"><img src="/media/logo/logo.png"></h5> //-->
                 <nav role='navigation'>
                     <ul>
-                        <li><a class="p-3 text-dark" href="{% url 'home' %}"
+                        <li><a class="" href="{% url 'home' %}"
                         style="font-weight:bold">Головна</a></li>
-                        <li><a class="p-3 text-dark"
+                        <li><a class=""
                             style="font-weight:bold">Фотозона</a>
                     <ul>
-                        <li><a href="{% url 'homeroom' %}">Home Room</a></li>
-                        <li><a href="{% url 'loftroom' %}">Loft Room</a></li>
-                        <li><a href="{% url 'smileroom' %}">Smile Room</a></li>
-                        <li><a href="{% url 'elleroom' %}">Elle Room</a></li>
-                        <li><a href="{% url 'inroom' %}">In Room</a></li>
-                        <li><a href="{% url 'freeroom' %}">Free Room</a></li>
+                        <li><a href="{% url 'homeroom' %}" style="font-weight:bold">Home Room</a></li>
+                        <li><a href="{% url 'loftroom' %}" style="font-weight:bold">Loft Room</a></li>
+                        <li><a href="{% url 'smileroom' %}" style="font-weight:bold">Smile Room</a></li>
+                        <li><a href="{% url 'elleroom' %}" style="font-weight:bold">Elle Room</a></li>
+                        <li><a href="{% url 'inroom' %}" style="font-weight:bold">In Room</a></li>
+                        <li><a href="{% url 'freeroom' %}" style="font-weight:bold">Free Room</a></li>
                     </ul>
                     </li>
-                    <li><a class="p-3 text-dark" href="{% url 'price' %}"
+                    <li><a class="" href="{% url 'price' %}"
                     style="font-weight:bold">Прайс</a></li>
-                    <li><a class="p-3 text-dark" href="about"
+                    <li><a class="" href="about"
                     style="font-weight:bold">Фотографи</a></li>
 
 
                 <li><a class="btn btn-outline-primary"  href="{% url 'addingorder' %}"
                    style="
-                            display: inline-block;
-                            font-weight: 400;
+
                             color: #212529;
                             text-align: center;
                             vertical-align: middle;
-                            -webkit-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
+                            margin-top: 20px;
                             user-select: none;
                             background-color: #a8bcfb;
                             border: 1px solid #a8bcfb;
-                            padding: .3rem .80rem;
                             font-size: 1rem;
                             line-height: 1.5;
                             border-radius: .99rem;
@@ -163,17 +157,17 @@
                             margin-right: 25px;
                             margin-left: 15px;
                             font-weight:bold;
-                            transition: color .15s ease-in-out,background-color
-                            .15s ease-in-out,border-color .15s ease-in-out,box-shadow
-                            .15s ease-in-out;">Бронювання</a></li>
+                            ">Бронювання</a></li>
                  </ul>
                 </nav>
     </div>
+
 <main>
 <div class="container">
     {% block content %}{% endblock %}
 </div>
 </main>
+
 <footer>
     <div class="footer" style="color: #fff; padding: 10px;">Art-Line Photo studio © 2021
             <a class="btn btn-outline-primary" href="admin"
