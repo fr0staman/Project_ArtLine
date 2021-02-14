@@ -12,7 +12,7 @@
             .wrapper{
                  display: flex;
                  flex-direction: column;
-                 height: 100%;
+                 min-height: 100%;
                  position:fixed;
                  width: 100%;
                  height: 100%;
@@ -37,7 +37,6 @@
                 overflow-y:auto;
             }
             .footer{
-
                 width: 100%;
                 min-height: 62px;
                 max-height: 62 px;
@@ -55,7 +54,6 @@
                 padding: 0;
                 margin: 0;
             }
-                                /*| Navigation |*/
 
             nav{
                 position: fixed;
@@ -116,6 +114,31 @@
                 margin-bottom: 0rem;
             }
                                 <!--____________________________//-->
+
+            ::-webkit-scrollbar {
+                overflow-y: scroll;
+                background-color: #ffffff;
+                width: 200px;
+                height: 200px;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+                background-color: #f9f9fd;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 20px;
+                background-color: #a8bcfb;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+                border-radius: 10px;
+                background-color: #f9f9fd;
+            }
+
+
     </style>
 </head>
 <body>
@@ -179,7 +202,7 @@
                 background-color: rgb(0 0 0 / 0%);
                 color: #ffffff;
                 border-color: rgb(0 0 0 / 8%);
-">Адміністрування</a>
+                ">Адміністрування</a>
     </div>
 </footer>
  </div>
