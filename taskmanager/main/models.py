@@ -16,8 +16,6 @@ class Orders(models.Model):
     DodPoslugu = models.CharField('Додаткові послуги', max_length=64)
     Descrip = models.TextField('Опис')
 
-
-
     def __str__(self):
         return self.title
 

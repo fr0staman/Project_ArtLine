@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-
+{% load static %}
 {% block title %}
 Фотографи
 {% endblock %}
@@ -20,7 +20,7 @@
     </style>
                                 <!--Логотип по середині//-->
                             <!--І знову замість фотки квадрат :( //-->
-<figure class="fig"><img src="mainlogo.jpg" width="320" height="179" alt="Logo"></figure>
+<figure class="fig"><img src="{% static 'main/images/logo/mainlogo.png'%}" width="320" height="179" alt="Logo"></figure>
                                     <!--Лінія//-->
 <hr align="center" width="1000" color=#000 style="margin-bottom: 2rem;"/>
 <h1>Тут будуть фотографи</h1>
