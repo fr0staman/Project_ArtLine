@@ -17,12 +17,48 @@
             .d14 {
                 text-align:  center;
             }
+
+            .thumb figure {
+                width: 31%;
+                margin: 1%;
+                display: inline-block;
+            }
+
+            .thumb img {
+                border: 1px solid #55c5e9;
+                width: 100%;
+            }
+
+            .thumb figcaption {
+                text-align: center;
+                font-style: normal;
+                margin-top: 13px;
+            }
     </style>
                                 <!--Логотип по середині//-->
-                            <!--І знову замість фотки квадрат :( //-->
-<figure class="fig"><img src="{% static 'main/images/logo/mainlogo.png'%}" width="320" height="179" alt="Logo"></figure>
+    <figure class="fig"><img src="{% static 'main/images/logo/mainlogo.png'%}"
+                         width="320" height="179" alt="Logo"></figure>
                                     <!--Лінія//-->
-<hr align="center" width="1000" color=#000 style="margin-bottom: 2rem;"/>
-<h1>Тут будуть фотографи</h1>
-    <p>Тест тексту</p>
+    <hr align="center" width="1000" color=#000 style="margin-bottom: 2rem; "/>
+                                  <!-- Фотографи //-->
+    <div class="thumb">
+        <figure>
+            <img src="{% static 'main/images/Photographer/photographer1.jpg'%}">
+            <figcaption>Вероніка Самокійщук</figcaption>
+            <hr align="center" width="300" color=#000 style="margin-bottom: 23px;"/>
+            <figcaption>000 00 00 000 </figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'main/images/Photographer/photographer2.JPG'%}">
+            <figcaption>Тимофій Слюсарчук</figcaption>
+            <hr align="center" width="300" color=#000 style="margin-bottom: 23px;"/>
+            <figcaption>000 00 00 000 </figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'main/images/Photographer/photographer3.jpg'%}">
+            <figcaption>Ульяна Савчук</figcaption>
+            <hr a lign="center" width="300" color=#000 style="margin-bottom: 23px;"/>
+            <figcaption>000 00 00 000 </figcaption>
+        </figure>
+    </div>
 {% endblock %}
