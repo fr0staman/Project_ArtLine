@@ -9,9 +9,10 @@ Home Room
     <style>
             h1{
             margin-top: 30px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             }
             .image {
+                overflow:hidden;
                 width: 100%;
                 height: 100%;
             }
@@ -26,7 +27,7 @@ Home Room
                 -o-transform: scale(1.1);
             }
             .thumb figure {
-                width: 40%;
+                width: 45%;
                 margin: 1%;
                 display: inline-block;
             }
@@ -39,12 +40,11 @@ Home Room
 
     <h1>Home Room</h1>
 
-<div class="image">
-<div style="float:left; padding-right:30px;margin-bottom: 29px;">
-    <img src= "{% static 'main/images/Room/HomeRoom/HomeRoom4.png'%}"  align="left"></div>
-</div>
-
 <div class="thumb">
+        <figure>
+            <div class="image">
+            <img src= "{% static 'main/images/Room/HomeRoom/HomeRoom4.png'%}"></div>
+        </figure>
         <figure>
             <div class="image">
             <img src="{% static 'main/images/Room/HomeRoom/HomeRoom1.png'%}">

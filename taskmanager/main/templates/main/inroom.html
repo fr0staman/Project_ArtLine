@@ -12,6 +12,7 @@ In Room
             margin-bottom: 40px;
             }
             .image {
+                overflow:hidden;
                 width: 100%;
                 height: 100%;
             }
@@ -39,15 +40,14 @@ In Room
 
 <h1>In Room</h1>
 
-<div class="image">
-<div style="float:left; padding-right:30px;margin-bottom: 29px;">
-    <img src= "{% static 'main/images/Room/InRoom/InRoom3.png'%}" align="left"></div>
-</div>
-
 <div class="thumb">
         <figure>
             <div class="image">
-            <img src="{% static 'main/images/Room/InRoom/InRoom1.png'%}">
+            <img src= "{% static 'main/images/Room/InRoom/InRoom3.png'%}"></div>
+        </figure>
+        <figure>
+            <div class="image">
+            <img src="{% static 'main/images/Room/InRoom/InRoom4.png'%}">
             </div>
         </figure>
         <figure>
@@ -57,7 +57,7 @@ In Room
         </figure>
         <figure>
             <div class="image">
-            <img src="{% static 'main/images/Room/InRoom/InRoom4.png'%}">
+            <img src="{% static 'main/images/Room/InRoom/InRoom1.png'%}">
             </div>
         </figure>
 {% endblock %}
