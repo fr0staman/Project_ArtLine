@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Task
+from .models import Orders
 
-admin.site.register(Task)
+admin.site.register(Orders)

@@ -1,11 +1,6 @@
 from django.db import models
 
 
-class Task(models.Model):
-    title = models.CharField('Назва', max_length=64)
-    task = models.TextField('Опис')
-
-
 class Orders(models.Model):
     P = models.CharField('Прізвище', max_length=16)
     I = models.CharField('Ім`я', max_length=16)
@@ -16,8 +11,8 @@ class Orders(models.Model):
     DodPoslugu = models.CharField('Додаткові послуги', max_length=64)
     Descrip = models.TextField('Опис')
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #    return self.title
 
     class Meta:
         verbose_name = 'Задача'

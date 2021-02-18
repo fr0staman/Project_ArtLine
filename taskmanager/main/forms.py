@@ -1,21 +1,5 @@
-from .models import Task, Orders
+from .models import Orders
 from django.forms import  ModelForm, TextInput, Textarea
-
-
-class TaskForm(ModelForm):
-    class Meta:
-        model = Task
-        fields = ["title", "task"]
-        widgets = {
-            "title": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Введіть назву'
-            }),
-            "task": Textarea(attrs={
-                'class': 'form-control',
-                'placeholder': 'Введіть щось бубласочка'
-            }),
-        }
 
 
 class OrderForm(ModelForm):
@@ -53,6 +37,6 @@ class OrderForm(ModelForm):
             }),
             "Descrip": Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Введіть щось бубласочка'
+                'placeholder': 'Деталі'
             }),
         }

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import TaskForm, OrderForm
+from .forms import OrderForm
 
 def index(request):
     return render(request, 'main/index.html')
@@ -9,21 +9,21 @@ def about(request):
     return render(request, 'main/about.html')
 
 
-def create(request):
-    error = ''
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-        else:
-            error = 'Ви щось не то тикнули'
-    form = TaskForm()
-    context = {
-        'form': form,
-        'error': error
-    }
-    return render(request, 'main/create.html', context)
+# def create(request):
+#     error = ''
+#     if request.method == 'POST':
+#         form = TaskForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('home')
+#         else:
+#             error = 'Ви щось не то тикнули'
+#     form = TaskForm()
+#     context = {
+#         'form': form,
+#         'error': error
+#     }
+#     return render(request, 'main/create.html', context)
 
 
 def addingorder(request):
