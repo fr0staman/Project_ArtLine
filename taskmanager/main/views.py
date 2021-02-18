@@ -67,7 +67,7 @@ def inroom(request):
 def freeroom(request):
     return render(request, 'main/freeroom.html')
 
-def formworkers():
-    cursor = mysql.connection.cursor()
-    cur = cursor.execute("SELECT ID_worker, surname FROM workers")
-    return render_template('formworkers.html', workers0=cursor.fetchall())
+# def formworkers():
+#     cursor = mysql.connection.cursor()
+#     cur = cursor.execute("SELECT ID_worker, surname FROM workers")
+#     return render_template('formworkers.html', workers0=cursor.fetchall())

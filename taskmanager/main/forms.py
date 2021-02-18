@@ -5,7 +5,7 @@ from django.forms import  ModelForm, TextInput, Textarea
 class OrderForm(ModelForm):
     class Meta:
         model = Orders
-        fields = ['P','I','B','email','phone','zona', 'DodPoslugu','Descrip']
+        fields = ['P', 'I', 'B', 'email', 'phone', 'zona', 'DodPoslugu', 'Descrip']
         widgets = {
             "P": TextInput(attrs={
                 'class': 'form-control',
@@ -28,8 +28,8 @@ class OrderForm(ModelForm):
                 'placeholder': 'Телефон'
             }),
             "zona": TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Введіть зону фотосесії'
+                 'class': 'form-control',
+                 'placeholder': 'Введіть зону фотосесії'
             }),
             "DodPoslugu": TextInput(attrs={
                 'class': 'form-control',

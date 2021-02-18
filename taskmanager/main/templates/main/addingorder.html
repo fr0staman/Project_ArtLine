@@ -47,12 +47,12 @@
                     color: #707981;
                 }
             </style>
-    <form class="decor">
+    <form class="decor" method = "post">
         <div class="form-inner">
             <h3>Введіть свої дані:</h3>
                 {% csrf_token %}
-                {{ form.title }} <br>
-                {{ form.task }} <br>
+                <br>
+                <br>
                 {{ form.P }}<br>
                 {{ form.I }} <br>
                 {{ form.B }} <br>
@@ -72,9 +72,9 @@
                     <option value="s3">Перукар</option>
                     <option value="s4">Стиліст</option>
             </select> <br>
-                <!-- {{ form.zona }} <br> -->
-                <!-- {{ form.DodPoslugu }} <br> -->
-                {{ form.Descrip }} <br>
+<!--                 {{ form.zona }} <br>-->
+<!--                 {{ form.DodPoslugu }} <br>-->
+                 {{ form.Descrip }} <br>
             <button type="submit" class="btn btn-success"
             style="
                     margin-top: 30px;
